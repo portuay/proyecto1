@@ -13,7 +13,9 @@ sangatsu
 shigatsu
 gogatsu
 rokugatsu
-nanagatsu
+shichigatsu
 hachigatsu
-kyugatsu
-jyugatsu
+kugatsu
+jyuugatsu
+jyuuichigatsu
+jyuunigatsu
