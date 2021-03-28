@@ -29,6 +29,10 @@ se realizar otro cambio por motivos de sugerencias.
 
 Esc+shift+z+z //sirve para salir de la ventana
 
+git log //se muestra todo el historial
+
+git log --all --graph -decorate --oneline //muestra el historial detallado y mas compactado para su lectura
+
 git log archivo.txt //muestra el historial de cambios del archivo
 history //sirve para ver el historial de comandos usados
 !numero //se indica el numero del comando usado segun lo que indique el historial de comandos usados
