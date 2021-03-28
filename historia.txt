@@ -66,6 +66,7 @@ git merge esteeselnombredelbranch //sirve para fusionar el master con una rama, 
 para conectar git con github:
 git remote add origin aquiponeurldelgithub //se agrega el enlace hacia el repositorio de github
 git remote //sirve para saver si esta en el origin
+//antes de seguir, verificar con git status si hay cambios, luego aplicar git commit -am "mensaje" para que pueda ser reconocido al momento de hacer el push sino no lo reconocera, tambien si en caso no funciona se debe usar el git add . o el git add nombrearchivo.extension, esto se hace si en caso con anterioridad no se realizo el agregado del archivo o archivos al temporal del git.
 git pull origin main //trae la informacion del github hacia nuestra carpeta local
 git pull origin main --alow-unrelated-histories //sirve para unir con el github, por si el anterior comando muestra error
 git push origin main //para subir la informacion al github
@@ -79,7 +80,8 @@ ssh-add ~/.ssh/id_rsa//sirve para agregar la llave privada al github
 //ir y verificar la llave publica (la que termina con pub)) y abrir con vscode, copiar todo, ir a github, ir a settings, ir a ssh and gpg, crear ssh, poner titulo y pegar la llave copiada.
 //ahora ir a el proyecto donde se esté trabajando, copiar llave ssh donde dice clone or download
 
-pasos luego de realizar la clave ssh
+pasos luego de realizar la clave ssh:
+
 //ir primero a la carpeta del proyecto
 git remote -v //para visualizar la existencia del origin
 git remote set-url origin setraelaclavesshgeneradaengithub //con esto se logra la vinculación con github
