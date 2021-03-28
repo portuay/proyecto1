@@ -24,3 +24,66 @@ jyuunigatsu
 
 
 se hizo otro cambio 
+se realizar otro cambio por motivos de sugerencias.
+
+
+Esc+shift+z+z //sirve para salir de la ventana
+
+git log archivo.txt //muestra el historial de cambios del archivo
+history //sirve para ver el historial de comandos usados
+!numero //se indica el numero del comando usado segun lo que indique el historial de comandos usados
+aca se inicia todo:
+
+pwd //sirve para saber en que carpeta me encuentro ubicado
+
+git init //para crear una carpeta temporal en nuestro proyecto que indica que se trabajara con git
+
+git config //se muestra la configuracion actual del git
+el pull y fetch //sirve para traer la info del github
+push //sirve para enviar la informacion al github
+
+ls -al //sirve para mostrar la informacion que hay en la carpeta donde estemos
+
+git status //indica el status actual de los archivos dentro de la carpeta
+git add . //se agrega la documentacion hacia el temporal para luego realizar el commit
+git commit -m "estoesuncomentario" //esto sirve para realizar un commit y se agrega un comentario
+
+git commit -am "estoesuncomentario" //esto sirve para realizar un commit, la a indica que siempre se agregue, pero solo se cumple cuando anteriormente al archivo ya fue agregado (se uso add .), pero si no se ha usado antes no tendrá efecto
+
+git status
+git cat nombredelarchivo.txt //sirve para visualizar contenido del archivo
+git branch esteeselnombredelbranch //sirve para crear una rama(branch) va a estar aparte, no toca el main
+git checkout esteeselnombredelbranch //sirve para cambiar a un branch o al main
+git branch //lista las ramas existentes
+git merge esteeselnombredelbranch //sirve para fusionar el master con una rama, se debe estar en el main para no perder los datos del main, se perdera los datos de la rama que se indique
+
+para conectar git con github:
+git remote add origin aquiponeurldelgithub //se agrega el enlace hacia el repositorio de github
+git remote //sirve para saver si esta en el origin
+git pull origin main //trae la informacion del github hacia nuestra carpeta local
+git pull origin main --alow-unrelated-histories //sirve para unir con el github, por si el anterior comando muestra error
+git push origin main //para subir la informacion al github
+
+crear llave ssh:
+ssh-keygen -t rsa -b 4096 -C "correodegithub@hotmail.com" //para generar clave ssh, luego indica donde se quiere guardar la clave, pero se deja donde esta, ya que es la carpeta donde estoy usando mi proyecto y se da enter, luego pide otra clave, se coloca clave. se genera archivo id_rsa
+
+eval $(ssh-agent -s)// se da enter y signifa que esta activando el proceso del ssh
+//ir a la carpeta por defecto en este caso se esta en la carpeta cloud
+ssh-add ~/.ssh/id_rsa//sirve para agregar la llave privada al github
+//ir y verificar la llave publica (la que termina con pub)) y abrir con vscode, copiar todo, ir a github, ir a settings, ir a ssh and gpg, crear ssh, poner titulo y pegar la llave copiada.
+//ahora ir a el proyecto donde se esté trabajando, copiar llave ssh donde dice clone or download
+
+pasos luego de realizar la clave ssh
+//ir primero a la carpeta del proyecto
+git remote -v //para visualizar la existencia del origin
+git remote set-url origin setraelaclavesshgeneradaengithub //con esto se logra la vinculación con github
+git remote -v //para visualizar la existencia del origin y que se realizo el cambio
+//hacer prueba y realizare cualquier cambio
+//primero se hace un pull y luego el push para realizar la prueba
+git pull //escribir yes
+git pull origin main //se da enter para traer lo de github al local para combinar
+git status //para ver si hay cambios
+git commit -am "escribirmensaje"
+git push origin main //para enviar la info al github
+
+
