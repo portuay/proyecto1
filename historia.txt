@@ -32,6 +32,8 @@ Esc+shift+z+z //sirve para salir de la ventana
 git log //se muestra todo el historial
 
 git log --all --graph -decorate --oneline //muestra el historial detallado y mas compactado para su lectura
+alias nombrequequeramos="git log --all --graph -decorate --oneline"//sirve para almacenar toda esa linea en una sola palabra y poder de manera mas facil el arbol realizado hasta ahora donde se ve el main y sus ramas
+nombrequequeramos//luego de nombrar solo se escribe el nombre asignado y enter, nos mostrará todo como si hubiesemos escrito toda la linea
 
 git log archivo.txt //muestra el historial de cambios del archivo
 history //sirve para ver el historial de comandos usados
@@ -90,4 +92,23 @@ git status //para ver si hay cambios
 git commit -am "escribirmensaje"
 git push origin main //para enviar la info al github
 
+para hacer etiquetas:
 
+git tag -a v.01 -m "resultado de las primeras"//para añadir un tag o etiqueta
+git tag //para ver todas las tag
+git show-ref --tags //para saber que hash esta asginado a cada tag
+git pull origin main//traer todo de github
+git push origin --tags//para realizar el envio de los tags
+
+si se desea eliminar un tag:
+git log --all --graph -decorate --oneline//o en todo caso llamar a su alias asiganda, ya que esto sirve para ver el hash asignado a cada commit(el cod asignado son los primeros digitos mostrados al inicio de cada linea)
+
+git tag - a quieroeliminar -m "esto es lo que elminiare" aquisecopiaelhashdelarbol 
+git pull origin main
+git push origin main --tags
+git tag //para ver los tags existentes
+git tag -d nombredetag //la d de delete
+git status
+git pull origin main
+git push origin master//al ir a la pagina sigue ahi pero en el local ya no esta
+git push origin :refs/tags/nombredeltag //con esto se borra el tag en el github(la pagina)
