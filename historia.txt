@@ -27,6 +27,8 @@ se hizo otro cambio
 se realizar otro cambio por motivos de sugerencias.
 
 
+touch nombrearchivo.extension//sirve para crear archivo
+
 clear //para limpiar ventana o con ctrl+c
 
 mkdir nombredecarpeta //sirve para crear carpeta o directorio nuevo
