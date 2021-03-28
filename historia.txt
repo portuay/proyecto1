@@ -27,6 +27,10 @@ se hizo otro cambio
 se realizar otro cambio por motivos de sugerencias.
 
 
+clear //para limpiar ventana o con ctrl+c
+
+mkdir nombredecarpeta //sirve para crear carpeta o directorio nuevo
+
 Esc+shift+z+z //sirve para salir de la ventana
 
 git log //se muestra todo el historial
@@ -114,3 +118,26 @@ git status
 git pull origin main
 git push origin master//al ir a la pagina sigue ahi pero en el local ya no esta
 git push origin :refs/tags/nombredeltag //con esto se borra el tag en el github(la pagina)
+
+
+git show-branch --all//sirve para ver el historial por rama
+gitk //abre en una ventana aparte la historia de las ramas y tags mas detallados, es preferible usar la consola
+git branch//sirve para listar ramas
+//dentro de main se puede realizar el envio de las ramas que haya creado, ejem: git push origin header, git push origin footer, esto sirve para que se peudan visualizar las ramas en la pagina.
+
+si traigo un proyecto nuevo con otro usuario:
+
+git clone urlhttpsdegithub //sirve para clonar un proeycto de github
+
+//se hace cambios a cualquier archivo, luego se hace el git status, luego git commit -am "mensaje", luego el git pull origin main, luego origin push origin main, pero aparecera un problema por temas de permisos(esto se debe a que el propietario del proyecto no otrogo permisos), esto se soluciona cuando el propietario va a su cuenta de github, ingresa a su proyecto y va a settings, ir a manage access, se invita a colaborador ingresando su correo o tambien se puede poner su username (portuay)
+
+//Basicamente el flujo de trabajo seria como:
+//Crear ramas
+//Asignar una rama a cada programador
+//El programador baja el repositorio con git pull origin master
+//El programador cambia de rama
+//El programador trabaja en esa rama y hace commits
+//El programador sube su trabajo con git push origin #nombre_rama
+//El jefe baja y unifica todos los cambios
+
+
