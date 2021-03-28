@@ -6,9 +6,11 @@ clear //para limpiar ventana o con ctrl+c
 
 mkdir nombredecarpeta //sirve para crear carpeta o directorio nuevo
 
-dir //muestra archivos dentro de la carpeta en la que se encuentra
+dir //muestra archivos dentro de la carpeta en la que se encuentra es igual a ls
 
 Esc+shift+z+z //sirve para salir de la ventana
+
+git rm arvhicoaremover.extension //sirve para remover el archivo que queramos
 
 git log //se muestra todo el historial
 
